@@ -1,0 +1,63 @@
+.search_brand{
+    width: 80px;
+    height: 30px;
+    border: solid 2px grey;
+    color: gray;
+    font-weight: bold;
+    border-radius: 18px;
+    font-size: 13px;
+    background-color: rgba(0,0,0,0);
+}
+
+.search_brand + .search_brand {
+    margin-left: 30px;
+}
+
+header{
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+.purpose{
+    width: 130px;
+    height: 30px;
+    border: solid 2px grey;
+    color: gray;
+    font-weight: bold;
+    border-radius: 18px;
+    font-size: 13px;
+    background-color: rgba(0,0,0,0);
+}
+
+.purpose+.purpose{
+    margin-left: 30px;
+}
+
+.text{
+    font-weight: bold;
+    color: black;
+
+}
+
+a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recommend{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+section{
+    margin-top: 10px;
+}
+
+.product{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(188, 188, 188);
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
