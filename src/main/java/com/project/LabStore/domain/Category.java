@@ -1,5 +1,5 @@
 package src.main.java.com.project.LabStore.domain;
 
-public class Purpose {
+public class Category {
 
 }
