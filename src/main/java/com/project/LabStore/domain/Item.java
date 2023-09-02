@@ -1,4 +1,4 @@
-package com.project.LabStore.domain.item;
+package com.project.LabStore.domain;
 
 import src.main.java.com.project.LabStore.domain.Shop;
 

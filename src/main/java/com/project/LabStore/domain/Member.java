@@ -1,12 +1,12 @@
 package com.project.LabStore.domain;
 
-import com.project.LabStore.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,6 +25,7 @@ public class Member {
     private String phone;
 
     private Date dateJoined;
+    @OneToMany(mappedBy = "member")
     private ArrayList<Item> wishList;
     private boolean isAdministrator;
 
