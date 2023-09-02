@@ -1,4 +1,4 @@
-package src.main.java.com.project.LabStore.domain;
+package com.project.LabStore.domain;
 
 public class Category {
 
