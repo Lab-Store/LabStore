@@ -3,8 +3,8 @@ package com.project.LabStore.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,12 +23,12 @@ public class Member {
     private String email;
     private String phone;
 
-    private Date dateJoined;
+    private LocalDateTime dateJoined;
     private boolean isAdministrator;
 
     @JsonIgnore
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    private List<Item> wishList = new ArrayList<>();
+    private List<MemberItem> wishList = new ArrayList<>();
 
 
 

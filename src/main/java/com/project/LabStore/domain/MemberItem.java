@@ -1,4 +1,23 @@
 package com.project.LabStore.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter @Setter
 public class MemberItem {
+
+    @Id @GeneratedValue
+    @Column(name = "member_item_id")
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "item_id")
+    private Item item;
 }
