@@ -1,21 +1,20 @@
 package com.project.LabStore.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter @Setter
 public class Member {
 
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
+    @Column(name = "member_id")
     private Long id;
 
     private String userid;
@@ -25,11 +24,11 @@ public class Member {
     private String phone;
 
     private Date dateJoined;
-    @OneToMany(mappedBy = "member")
-    private ArrayList<Item> wishList;
     private boolean isAdministrator;
 
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+    private List<Item> wishList = new ArrayList<>();
 
 
 
